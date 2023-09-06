@@ -1,0 +1,2 @@
+Write a code that will include a pet's age, color, hunger, and name. Let age and name be unreachable.
+Let the hunger value be edible. Have the pet get its information and print it on the screen.

@@ -1,2 +1,0 @@
-Evcil bir hayvanýn yaþ, renk, açlýk ve isim bilgilerini içerecek bir kod yazýn. Yaþ ve isim ulaþýlamaz olsun. 
-Açlýk deðeri yenilebilir olsun. Evcil hayvanýn bilgilerini alarak ekrana yazdýrmasýný saðlayýn. 	
