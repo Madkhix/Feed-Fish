@@ -1,120 +1,120 @@
-class balik {
-    private int yas;
-    private String isim;
-    public String renk;
-    int aclik;
+class fish {
+    private int age;
+    private String name;
+    public String color;
+    int hunger;
     
-     void besle(int yemek) {
-        this.aclik += yemek;
+     void feed(int food) {
+        this.hunger += food;
     }
      
-     void besle(double yemek)
+     void feed(double food)
      {
-         this.aclik += yemek;
+         this.hunger += food;
      }
 
-public balik () {
+public fish () {
     
-        this.isim = "isim degeri girilmedi.";
-        this.renk = "renk degeri girilmedi.";
-        this.yas = 2;
-        this.aclik = 0;
+        this.name = "Name value not entered.";
+        this.color = "Color value not entered.";
+        this.age = 2;
+        this.hunger = 0;
     }
 
-public balik(String isim, String renk, int yas, int aclik) {
-        this.isim = isim;
-        this.renk = renk;
-        this.yas = yas;
-        this.aclik = aclik;
+public fish(String name, String color, int age, int hunger) {
+        this.name = name;
+        this.color = color;
+        this.age = age;
+        this.hunger = hunger;
     }
-public balik(String isim, boolean renk, int yas) {
-        this.isim = isim;
-        renk = renk;
-        this.yas = yas;}
+public fish(String name, boolean color, int age) {
+        this.name = name;
+        color = color;
+        this.age = age;}
         
 
-public int getYas(){
-        return yas; 
+public int getAge(){
+        return age; 
     }
 
-public String getİsim() {
-        return this.isim;
+public String getName() {
+        return this.name;
     }
-    public int getAclik() {
-        return this.aclik;
+    public int getHunger() {
+        return this.hunger;
     }
 
-public void setYas(int age){
-        this.yas = yas;
+public void setAge(int age){
+        this.age = age;
 }
 
-public void setİsim(String isim){
-        this.isim = isim;
+public void setName(String name){
+        this.name = name;
 }
 
-public void setAclik(int aclik){
-        this.aclik = aclik;
+public void setHunger(int hunger){
+        this.hunger = hunger;
 }
 
 
 
-public  void yeniBalik(){
-        System.out.println("Balığın adı: " + this.getİsim()
-                + "\nBalığın yaşı: " + this.getYas() + "\nBalığın rengi : " +this.renk +"\nBalığın tokluğu : "+ this.getAclik() + "\n");
+public  void newFish(){
+        System.out.println("Fish name: " + this.getName()
+                + "\nAge of Fish: " + this.getAge() + "\nFish Color : " +this.color +"\nFish Satiety : "+ this.getHunger() + "\n");
     }}
 
 
-class Orando extends balik{
-    private boolean renk;
+class Orando extends fish{
+    private boolean color;
     
 
-    public Orando(String isim, int yas, boolean renk) {
-        super(isim, renk, yas);
-        this.renk = renk;
+    public Orando(String name, int age, boolean color) {
+        super(name, color, age);
+        this.color = color;
     }
     
 
-    public boolean getRenk() {
-        return this.renk;
+    public boolean getColor() {
+        return this.color;
     }
     
  
-    public void setRenk(boolean renk) {
-        this.renk = renk;
+    public void setColor(boolean color) {
+        this.color = color;
     }
     
-    public void yeniBalik() {
-        if(this.renk == true) {
-            System.out.println("Balığın adı: " + this.getİsim()
-            + "\nBalığın yaşı: " + this.getYas()
-            + "\nBalığın rengi farklıdır."  + "\nBalığın tokluğu : "+ this.getAclik() +"\n");
+    public void newFish() {
+        if(this.color == true) {
+            System.out.println("Fish name: " + this.getName()
+            + "\nAge of fish: " + this.getAge()
+            + "\nThe color of the fish is different."  + "\nFish Satiety : "+ this.getHunger() +"\n");
         }else {
-            System.out.println("Kedimizin adı: " + this.getİsim()
-            + "\nBalığın yaşı: " + this.getYas()
-            + "\nBalığın rengi farklı değildir." 
-            + "\nBalığın tokluğu : "+ this.getAclik() +"\n");
+            System.out.println("Fish name: " + this.getName()
+            + "\nAge of fish: " + this.getAge()
+            + "\nThe color of the fish is not different." 
+            + "\nFish Satiety : "+ this.getHunger() +"\n");
         }
     }
     
 }
 
-public class balik_deneme {
+public class feed_fish {
 
     public static void main(String[] args) {
         // main method
         
-        balik balik1, balik2, balik3;
+        fish fish1, fish2, fish3;
         
-        balik1 = new balik("Sevimli","turuncu",2,3);
-        balik2 = new Orando("Oia", 3, true);
-        balik3 = new Orando("Beyaz", 4, false);
+        fish1 = new fish("Charmer","orange",2,3);
+        fish2 = new Orando("Oia", 3, true);
+        fish3 = new Orando("White", 4, false);
         
-        balik1.besle(5);
-        balik3.besle(2);
+        fish1.feed(5);
+        fish3.feed(2);
                 
-        balik1.yeniBalik();
-        balik2.yeniBalik();
-        balik3.yeniBalik();
+        fish1.newFish();
+        fish2.newFish();
+        fish3.newFish();
 
     }
 
